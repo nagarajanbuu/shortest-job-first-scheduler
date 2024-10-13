@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Job First Scheduling Algorithm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shortest Job First Scheduling Algorithm</h1>
+        <label for="numProcesses">Number of Processes:</label>
+        <input type="number" id="numProcesses" value="3" min="1">
+        <button onclick="generateProcessInputs()">Generate Process Inputs</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                </tr>
+            </thead>
+            <tbody id="processTable">
+                <tr>
+                    <td>P1</td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="generateScheduler()">Generate Scheduler</button>
+        <div id="output">
+            <h2>Results:</h2>
+            <p id="avgWaitingTime"></p>
+            <p id="avgTurnaroundTime"></p>
+            <div id="ganttChart"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
